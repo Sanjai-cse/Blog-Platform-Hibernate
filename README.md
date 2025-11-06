@@ -5,36 +5,34 @@ This is a simple, console-based blogging application built with Java. It demonst
 The application allows users to register, log in, create blog posts, comment on posts, and delete their own posts, all from a command-line interface. The primary goal of this project is to showcase a clean separation of concerns using a layered (n-tier) architecture.
 
 ✨ Features
-# User Management:
+User Management:
 Register a new user account.
 Log in with an existing account.
-
-# Post Management:
+Post Management:
 Create new blog posts.
 View a list of all posts from all authors.
 Delete your own posts.
-
-# Comment Management:
+Comment Management:
 Add comments to any post.
 View all comments for a specific post.
 
 🏛️ Architecture
 The project follows a strict layered architecture to separate responsibilities:
 
-# Presentation (UI) Layer (com.blog.App)
+Presentation (UI) Layer (com.blog.App)
 Handles all console input and output.
 Talks only to the Service layer.
 
-# Service Layer (com.blog.service)
+Service Layer (com.blog.service)
 Contains the business logic (e.g., checking if a user is authorized to delete a post).
 Talks to the UI and DAO layers.
 
-# DAO Layer (com.blog.dao)
+DAO Layer (com.blog.dao)
 Data Access Object (DAO) layer.
 The only layer that communicates with the database via Hibernate.
 Performs all CRUD (Create, Read, Update, Delete) operations.
 
-# Entity Layer (com.blog.entity)
+Entity Layer (com.blog.entity)
 POJOs (Plain Old Java Objects) that represent the database tables (User, Post, Comment).
 
 🛠️ Technology Stack
