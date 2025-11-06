@@ -1,58 +1,60 @@
 ## Online Blog Platform (Console Application)
 
-This is a simple, console-based blogging application built with Java. It demonstrates a professional layered architecture and uses Hibernate for Object-Relational Mapping (ORM) to a MySQL database.
+This is a simple, console-based blogging application built with Java. It demonstrates a professional layered **architecture** and uses **Hibernate** for Object-Relational Mapping (ORM) to a **MySQL** database.
 
-📜 Description
+📜 **Description**
 
 The application allows users to register, log in, create blog posts, comment on posts, and delete their own posts, all from a command-line interface. The primary goal of this project is to showcase a clean separation of concerns using a layered (n-tier) architecture.
 
-✨ Features
+✨ **Features**
 
-1. User Management:
-Register a new user account.
-
-Log in with an existing account.
-
-2. Post Management:
+1. **User Management:**
    
-Create new blog posts.
+    Register a new user account.
 
-View a list of all posts from all authors.
-Delete your own posts.
+    Log in with an existing account.
 
-3. Comment Management:
+2. **Post Management:**
    
-Add comments to any post.
+    Create new blog posts.
 
-View all comments for a specific post.
+    View a list of all posts from all authors.
+   
+    Delete your own posts.
 
-🏛️ Architecture
+3. **Comment Management:**
+   
+    Add comments to any post.
+
+    View all comments for a specific post.
+
+🏛️**Architecture**
 
 The project follows a strict layered architecture to separate responsibilities:
 
-1. Presentation (UI) Layer (com.blog.App)
+1.  **Presentation (UI) Layer (com.blog.App)
+**
+     Handles all console input and output.
 
-Handles all console input and output.
+     Talks only to the Service layer.
 
-Talks only to the Service layer.
+2. **Service Layer (com.blog.service)**
 
-2. Service Layer (com.blog.service)
+     Contains the business logic (e.g., checking if a user is authorized to delete a post).
 
-Contains the business logic (e.g., checking if a user is authorized to delete a post).
+     Talks to the UI and DAO layers.
 
-Talks to the UI and DAO layers.
+3.** DAO Layer (com.blog.dao)**
 
-3. DAO Layer (com.blog.dao)
+     Data Access Object (DAO) layer.
 
-Data Access Object (DAO) layer.
+     The only layer that communicates with the database via Hibernate.
 
-The only layer that communicates with the database via Hibernate.
+     Performs all CRUD (Create, Read, Update, Delete) operations.
 
-Performs all CRUD (Create, Read, Update, Delete) operations.
+4.** Entity Layer (com.blog.entity)**
 
-4. Entity Layer (com.blog.entity)
-
-POJOs (Plain Old Java Objects) that represent the database tables (User, Post, Comment).
+     POJOs (Plain Old Java Objects) that represent the database tables (User, Post, Comment).
 
 🛠️ Technology Stack
 
