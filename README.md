@@ -1,10 +1,13 @@
 ## Online Blog Platform (Console Application)
+
 This is a simple, console-based blogging application built with Java. It demonstrates a professional layered architecture and uses Hibernate for Object-Relational Mapping (ORM) to a MySQL database.
 
 📜 Description
+
 The application allows users to register, log in, create blog posts, comment on posts, and delete their own posts, all from a command-line interface. The primary goal of this project is to showcase a clean separation of concerns using a layered (n-tier) architecture.
 
 ✨ Features
+
 User Management:
 Register a new user account.
 Log in with an existing account.
@@ -17,6 +20,7 @@ Add comments to any post.
 View all comments for a specific post.
 
 🏛️ Architecture
+
 The project follows a strict layered architecture to separate responsibilities:
 
 Presentation (UI) Layer (com.blog.App)
@@ -36,27 +40,34 @@ Entity Layer (com.blog.entity)
 POJOs (Plain Old Java Objects) that represent the database tables (User, Post, Comment).
 
 🛠️ Technology Stack
+
 Core Language: Java 8+
 Database: MySQL
 ORM: Hibernate 5.x
 Build Tool: Apache Maven
 
 🚀 Getting Started
+
 Follow these instructions to get the project up and running on your local machine.
 
 Prerequisites
+
 You must have the following software installed:
 
 Java (JDK) 8 or higher
 Apache Maven
 MySQL Server
+
 1. Database Setup
+
 Open your MySQL client (like MySQL Workbench or the command line).
 
 Create a new database (schema) for the project.
 
 CREATE DATABASE blog_platform_db;
+
 2. Configure Database Connection
+
 Navigate to src/main/resources/.
 
 Open the hibernate.cfg.xml file.
@@ -74,6 +85,7 @@ Open a terminal and navigate to the project's root directory (where pom.xml is).
 Use Maven to build the project. This will download all dependencies.
 
 mvn clean install
+
 Run the main application class from your terminal or directly from your Eclipse IDE.
 
 From Eclipse/IDE: Right-click on src/main/java/com/blog/App.java -> Run As -> Java Application.
