@@ -8,35 +8,50 @@ The application allows users to register, log in, create blog posts, comment on 
 
 ✨ Features
 
-User Management:
+1. User Management:
 Register a new user account.
+
 Log in with an existing account.
-Post Management:
+
+2. Post Management:
+   
 Create new blog posts.
+
 View a list of all posts from all authors.
 Delete your own posts.
-Comment Management:
+
+3. Comment Management:
+   
 Add comments to any post.
+
 View all comments for a specific post.
 
 🏛️ Architecture
 
 The project follows a strict layered architecture to separate responsibilities:
 
-Presentation (UI) Layer (com.blog.App)
+1. Presentation (UI) Layer (com.blog.App)
+
 Handles all console input and output.
+
 Talks only to the Service layer.
 
-Service Layer (com.blog.service)
+2. Service Layer (com.blog.service)
+
 Contains the business logic (e.g., checking if a user is authorized to delete a post).
+
 Talks to the UI and DAO layers.
 
-DAO Layer (com.blog.dao)
+3. DAO Layer (com.blog.dao)
+
 Data Access Object (DAO) layer.
+
 The only layer that communicates with the database via Hibernate.
+
 Performs all CRUD (Create, Read, Update, Delete) operations.
 
-Entity Layer (com.blog.entity)
+4. Entity Layer (com.blog.entity)
+
 POJOs (Plain Old Java Objects) that represent the database tables (User, Post, Comment).
 
 🛠️ Technology Stack
